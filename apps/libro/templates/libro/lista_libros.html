@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Libros</title>
+</head>
+<body>
+    <h1>Lista de Libros</h1>
+    <ul>
+        {% for libro in libros %}
+            <li>
+                <strong>{{ libro.titulo }}</strong>  
+                ({{ libro.autor.nombre }} {{ libro.autor.apellido }})
+                - {{ libro.fecha_publicacion }}
+            </li>
+        {% empty %}
+            <li>No hay libros cargados.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
